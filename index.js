@@ -2,10 +2,15 @@ const express = require('express');
 const { connectDB } = require('./db');
 const mongoose = require('mongoose');
 require('dotenv').config();
+const crud=require('./CRUD/route');
+
+
 
 const app = express();
 const port = process.env.PORT || 8080;
 const url = process.env.db_url;
+
+app.use('/route',crud);
 
 
 app.listen(port, async () => {

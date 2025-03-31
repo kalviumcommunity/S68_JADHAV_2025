@@ -1,3 +1,4 @@
+
 const {connect} = require('mongoose');
 
 const connectDB = async (url) => {
@@ -9,4 +10,4 @@ const connectDB = async (url) => {
         console.error(error);
     }
 }
-module.exports = {connectDB};
+module.exports = connectDB;
